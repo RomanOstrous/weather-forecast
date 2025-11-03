@@ -18,5 +18,12 @@ export function switchTheme () {
 
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
   }
-};
+
+  const sveTheme = localStorage.getItem('theme');
+
+  if (setTheme) {
+    setTheme(sveTheme);
+  }
+}
