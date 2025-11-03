@@ -24,7 +24,7 @@ export function getWeatherByForm() {
 
 function showRecentCity() {
   const city = JSON.parse(localStorage.getItem('cities'));
-  if(city.length === 0) return;
+  if (!city || city.length === 0) return;
   listCity.innerHTML = '';
   const li = document.createElement('li');
   li.textContent = city;
