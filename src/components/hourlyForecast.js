@@ -46,7 +46,7 @@ export const renderHourlyForecast = (data) => {
         <p class="hour">${dayLabel}</p>
         <p class="hour">${hour}:00</p>
         <img
-          src="https://openweathermap.org/img/wn/${icon}@4x.png"
+          src="https://openweathermap.org/img/wn/${icon}.png"
           alt="Погода"
         />
         <p class="temp">${temp} °C</p>

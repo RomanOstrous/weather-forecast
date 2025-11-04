@@ -6,7 +6,7 @@ export const renderDailyForecast = (data) => {
   dailyForecast.innerHTML = "";
 
   if (!data) {
-    showErrorMessage("Данные о погоде недоступны");
+    showErrorMessage("Данні про погоду недоступні");
   }
 
   const groupedData = groupDataByDay(data.list);
@@ -27,13 +27,13 @@ export const renderDailyForecast = (data) => {
 
       const date = new Date(dayData[0].dt * 1000);
 
-      const dayName = date.toLocaleDateString("ru-RU", {
+      const dayName = date.toLocaleDateString("uk-UK", {
         weekday: "short",
       });
 
       const dayNumber = date.getDate();
 
-      const monthName = date.toLocaleDateString("ru-RU", {
+      const monthName = date.toLocaleDateString("uk-UK", {
         month: "short",
       });
 
@@ -43,7 +43,7 @@ export const renderDailyForecast = (data) => {
         <p class="day">${dayName},</p>
         <p class="day">${dayNumber} ${monthName}</p>
         <img
-        src="https://openweathermap.org/img/wn/${icon}@4x.png"
+        src="https://openweathermap.org/img/wn/${icon}.png"
         alt="Погода"
         />
         <div class="temp">
@@ -60,7 +60,7 @@ const groupDataByDay = (list) => {
 
   list.forEach((item) => {
     const date = new Date(item.dt * 1000);
-    const dayKey = date.toLocaleDateString("ru-RU");
+    const dayKey = date.toLocaleDateString("uk-UK");
 
     if (!groupedData[dayKey]) {
       groupedData[dayKey] = [];
