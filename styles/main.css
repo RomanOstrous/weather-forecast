@@ -61,3 +61,18 @@ main {
 .sun-disk {
   animation: glow 2s infinite;
 }
+
+footer {
+  background-color: var(--background-color);
+  border-radius: 0;
+}
+
+.footer-link {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: #885c5c;
+  text-decoration: underline;
+}
